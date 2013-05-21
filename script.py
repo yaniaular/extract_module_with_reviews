@@ -29,7 +29,7 @@ print 'Limpiando registro...'
 os.system('find revno.txt -type f -print0 | xargs -0 sed -i "s/revno: //g"')
 os.system('find revno.txt -type f -print0 | xargs -0 sed -i "s/ \[merge\]//g"')
 
-print 'Creando branch vacío a partir de addons...'
+print 'Creando branch vacio a partir de addons...'
 os.system('bzr branch addons/ %s -r 0' % (module,) )
 
 print 'Registrando commit inicial para poder hacer merge la primera vez...'
@@ -38,7 +38,7 @@ os.system('touch ci.txt')
 os.system('bzr add')
 os.system('bzr ci -m """main"""')
 
-print 'Leyendo registro de branches donde se involucra el módulo %s...' % module
+print 'Leyendo registro de branches donde se involucra el modulo %s...' % module
 archivo = csv.DictReader(open('../revno.txt'))
 
 print 'Preparando lista de revisiones...'
@@ -67,4 +67,4 @@ for rev in invert:
 print 'Finalizando...'
 os.system('rm ../revno.txt')
 
-print 'Branch con módulo %s y sus revisiones fueron creadas correctamente!' % module 
+print 'Branch con modulo %s y sus revisiones fueron creadas correctamente!' % module 
