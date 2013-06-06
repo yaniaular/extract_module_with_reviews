@@ -23,9 +23,9 @@ module = 'base_module_doc_rst'
 
 print '\n\n*****************Creando registro de revisiones donde se involucre el modulo %s...' % module
 os.system('echo "revno" > revno.txt')
-os.system('bzr log addons/base_module_doc_rst | grep revno >> revno.txt')
+os.system('bzr log addons/%s | grep revno >> revno.txt',module)
 
-print '\n\n*****************Limpiando registro...'
+print '\n\n*****************Limpiando registro revno.txt...'
 os.system('find revno.txt -type f -print0 | xargs -0 sed -i "s/revno: //g"')
 os.system('find revno.txt -type f -print0 | xargs -0 sed -i "s/ \[merge\]//g"')
 
