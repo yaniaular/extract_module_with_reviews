@@ -53,7 +53,7 @@ Source code at lp:~yanina-aular/+junk/extraer_modulo_con_revisiones/
         formatter_class=argparse.RawDescriptionHelpFormatter)
 
     parser.add_argument(
-        'name',
+        '-n', '--name',
         metavar='MODULE_NAME',
         type=str,
         help='name of the module to separate.')
