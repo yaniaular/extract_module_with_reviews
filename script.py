@@ -38,7 +38,7 @@ directory at the same directory you use to run the script
 
 To run do this Example:
 
-    python script mrp_button_box -a 7.0-addons-vauxoo/
+    python script -n mrp_button_box -a 7.0-addons-vauxoo/
 
 If you want to use this script whatevere place you are you can edit
 your ~.bash_aliases file and add the alias
